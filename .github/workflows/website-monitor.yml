@@ -25,6 +25,11 @@ jobs:
       REQUEST_TIMEOUT_MS: 15000
       RETRY_COUNT: 3
       RETRY_INTERVAL_MS: 30000
+      BROWSER_CHECK_ENABLED: true
+      BROWSER_TIMEOUT_MS: 20000
+      BROWSER_POST_LOAD_WAIT_MS: 2000
+      BROWSER_MIN_VISIBLE_TEXT_LENGTH: 25
+      BROWSER_FAIL_ON_CONSOLE_ERROR: false
       LOG_FILE: logs/checks.jsonl
       SUMMARY_FILE: logs/summaries.jsonl
       STATE_FILE: state/outages.json
@@ -49,6 +54,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
 
       - name: Build
         run: npm run build

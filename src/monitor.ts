@@ -4,6 +4,7 @@ import path from "node:path";
 import { performance } from "node:perf_hooks";
 import { setTimeout as delay } from "node:timers/promises";
 import { fileURLToPath } from "node:url";
+import { runBrowserCheck } from "./browserCheck.js";
 import { config } from "./config.js";
 import { CheckLogEntry, logCheck, logSummary, printSummary, SummaryReport } from "./logger.js";
 import { sendDownAlert, sendRecoveryAlert } from "./notifier.js";
@@ -101,8 +102,25 @@ async function checkOnce(url: string): Promise<AttemptResult> {
       }
     });
 
-    const responseTimeMs = Math.round(performance.now() - startedAt);
     const healthy = response.status >= 200 && response.status <= 299;
+
+    if (healthy && config.browserCheck.enabled) {
+      const browserResult = await runBrowserCheck(url);
+      const responseTimeMs = Math.round(performance.now() - startedAt);
+
+      return {
+        url,
+        timestamp,
+        responseStatus: browserResult.responseStatus ?? response.status,
+        responseTimeMs,
+        healthy: browserResult.healthy,
+        errorMessage: browserResult.healthy
+          ? undefined
+          : `Frontend browser check failed: ${browserResult.errorMessage ?? "Unknown browser error"}`
+      };
+    }
+
+    const responseTimeMs = Math.round(performance.now() - startedAt);
 
     return {
       url,

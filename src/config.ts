@@ -14,6 +14,14 @@ export interface EmailConfig {
   to: string[];
 }
 
+export interface BrowserCheckConfig {
+  enabled: boolean;
+  timeoutMs: number;
+  postLoadWaitMs: number;
+  minVisibleTextLength: number;
+  failOnConsoleError: boolean;
+}
+
 export interface AppConfig {
   websites: string[];
   scheduleExpression: string;
@@ -25,6 +33,7 @@ export interface AppConfig {
   logFile: string;
   summaryFile: string;
   stateFile: string;
+  browserCheck: BrowserCheckConfig;
   email: EmailConfig;
 }
 
@@ -158,5 +167,12 @@ export const config: AppConfig = {
   logFile: resolvePath(readString("LOG_FILE", "logs/checks.jsonl")),
   summaryFile: resolvePath(readString("SUMMARY_FILE", "logs/summaries.jsonl")),
   stateFile: resolvePath(readString("STATE_FILE", "state/outages.json")),
+  browserCheck: {
+    enabled: readBoolean("BROWSER_CHECK_ENABLED", false),
+    timeoutMs: readNumber("BROWSER_TIMEOUT_MS", 20_000),
+    postLoadWaitMs: readNumber("BROWSER_POST_LOAD_WAIT_MS", 2_000),
+    minVisibleTextLength: readNumber("BROWSER_MIN_VISIBLE_TEXT_LENGTH", 25),
+    failOnConsoleError: readBoolean("BROWSER_FAIL_ON_CONSOLE_ERROR", false)
+  },
   email: buildEmailConfig()
 };

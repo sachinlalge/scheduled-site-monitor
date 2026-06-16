@@ -36,8 +36,12 @@ A website is marked `DOWN` when any of these happen:
 - DNS resolution fails
 - SSL certificate validation fails
 - Connection is refused or unreachable
+- Browser rendering fails when the Playwright check is enabled
+- The rendered page is blank or has almost no visible content
+- An unhandled frontend JavaScript error occurs
+- A same-origin document, script, or stylesheet fails to load
 
-The monitor uses HTTP `GET` requests.
+The monitor always uses HTTP `GET` requests. In GitHub Actions, it also opens each website in Chromium with Playwright so frontend failures can trigger the same DOWN alert path.
 
 ## Retry And Alert Behavior
 
@@ -76,6 +80,7 @@ Each check log includes:
 
 ```text
 src/
+  browserCheck.ts
   monitor.ts
   scheduler.ts
   notifier.ts
@@ -107,6 +112,11 @@ Then update `.env`.
 | `RETRY_COUNT` | `3` | Retries after the first failed attempt |
 | `RETRY_INTERVAL_MS` | `30000` | Delay between retries |
 | `RUN_ON_START` | `false` | Run one check immediately when the scheduler starts |
+| `BROWSER_CHECK_ENABLED` | `false` | Enable Playwright browser-render checks |
+| `BROWSER_TIMEOUT_MS` | `20000` | Maximum time for browser navigation |
+| `BROWSER_POST_LOAD_WAIT_MS` | `2000` | Extra wait after page load before inspecting content |
+| `BROWSER_MIN_VISIBLE_TEXT_LENGTH` | `25` | Minimum visible text before a page is treated as nearly blank, unless meaningful media is visible |
+| `BROWSER_FAIL_ON_CONSOLE_ERROR` | `false` | Treat browser `console.error` messages as failures |
 | `LOG_FILE` | `logs/checks.jsonl` | Per-site check log file |
 | `SUMMARY_FILE` | `logs/summaries.jsonl` | Per-run summary report file |
 | `STATE_FILE` | `state/outages.json` | Persistent outage state file |
@@ -137,6 +147,12 @@ Install dependencies:
 
 ```bash
 npm install
+```
+
+If you enable browser checks locally, install the Chromium browser used by Playwright:
+
+```bash
+npx playwright install chromium
 ```
 
 Create your environment file:
@@ -173,7 +189,7 @@ npm start
 
 ## Free Deployment With GitHub Actions
 
-For this monitor, the easiest free deployment is GitHub Actions. It does not keep a server running all day. Instead, GitHub starts a temporary runner at the scheduled times, runs the monitor, uploads the logs as artifacts, and commits `state/outages.json` so duplicate outage alerts and recovery alerts still work across runs.
+For this monitor, the easiest free deployment is GitHub Actions. It does not keep a server running all day. Instead, GitHub starts a temporary runner at the scheduled times, installs Chromium for the Playwright browser check, runs the monitor, uploads the logs as artifacts, and commits `state/outages.json` so duplicate outage alerts and recovery alerts still work across runs.
 
 This project includes:
 
