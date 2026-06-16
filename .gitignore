@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.npm-cache/
+logs/
+state/*
+!state/.gitkeep
+!state/outages.json
+npm-debug.log*
+*.tsbuildinfo

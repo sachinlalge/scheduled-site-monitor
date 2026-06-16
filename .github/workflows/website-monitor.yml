@@ -1,0 +1,91 @@
+name: Website Monitor
+
+on:
+  schedule:
+    # 09:00 IST = 03:30 UTC
+    - cron: "30 3 * * *"
+    # 15:00 IST = 09:30 UTC
+    - cron: "30 9 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: website-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    env:
+      WEBSITES: https://edgelearning.co/,https://sircletech.in/,https://finawiz.com/
+      REQUEST_TIMEOUT_MS: 15000
+      RETRY_COUNT: 3
+      RETRY_INTERVAL_MS: 30000
+      LOG_FILE: logs/checks.jsonl
+      SUMMARY_FILE: logs/summaries.jsonl
+      STATE_FILE: state/outages.json
+      ALERTS_ENABLED: true
+      SMTP_HOST: ${{ secrets.SMTP_HOST }}
+      SMTP_PORT: ${{ secrets.SMTP_PORT }}
+      SMTP_SECURE: ${{ secrets.SMTP_SECURE }}
+      SMTP_USER: ${{ secrets.SMTP_USER }}
+      SMTP_PASS: ${{ secrets.SMTP_PASS }}
+      EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+      EMAIL_TO: ${{ secrets.EMAIL_TO }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Prepare runtime files
+        run: |
+          mkdir -p logs state
+          test -f state/outages.json || echo '{"sites":{}}' > state/outages.json
+
+      - name: Run monitor
+        id: monitor
+        continue-on-error: true
+        run: node dist/monitor.js
+
+      - name: Upload run logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-monitor-logs-${{ github.run_id }}
+          path: logs/
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Persist outage state
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/outages.json
+          if git diff --cached --quiet; then
+            echo "No outage state changes to commit."
+          else
+            git commit -m "Update website monitor outage state [skip ci]"
+            git pull --rebase
+            git push
+          fi
+
+      - name: Mark workflow failed when any site is down
+        if: steps.monitor.outcome == 'failure'
+        run: exit 1

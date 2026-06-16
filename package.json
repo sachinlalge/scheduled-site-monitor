@@ -1,0 +1,30 @@
+{
+  "name": "website-monitoring-automation",
+  "version": "1.0.0",
+  "description": "Production-ready website monitoring automation with email alerts, retry logic, and twice-daily IST scheduling.",
+  "type": "module",
+  "main": "dist/scheduler.js",
+  "scripts": {
+    "dev": "tsx src/scheduler.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/scheduler.js",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "check:once": "tsx src/monitor.ts"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "node-cron": "^4.2.1",
+    "nodemailer": "^8.0.10"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/node-cron": "^3.0.11",
+    "@types/nodemailer": "^6.4.17",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

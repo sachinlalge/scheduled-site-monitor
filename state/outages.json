@@ -1,0 +1,16 @@
+{
+  "sites": {
+    "https://edgelearning.co/": {
+      "isDown": false,
+      "lastSuccessfulCheck": "2026-05-30T09:30:00.040Z"
+    },
+    "https://sircletech.in/": {
+      "isDown": false,
+      "lastSuccessfulCheck": "2026-05-30T09:30:00.570Z"
+    },
+    "https://finawiz.com/": {
+      "isDown": false,
+      "lastSuccessfulCheck": "2026-05-30T09:30:01.357Z"
+    }
+  }
+}
