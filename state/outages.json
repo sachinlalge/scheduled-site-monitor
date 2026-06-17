@@ -1,18 +1,19 @@
 {
   "sites": {
     "https://edgelearning.co/": {
-      "isDown": true,
-      "lastSuccessfulCheck": "2026-06-16T17:47:20.012Z",
-      "lastFailureMessage": "Frontend browser check failed: Unhandled frontend error: wp is not defined",
-      "lastFailureAlertSentAt": "2026-06-17T08:42:15.312Z"
+      "isDown": false,
+      "lastSuccessfulCheck": "2026-06-17T13:01:43.743Z",
+      "lastRecoveryNotificationSentAt": "2026-06-17T13:01:43.743Z"
     },
     "https://sircletech.in/": {
       "isDown": false,
-      "lastSuccessfulCheck": "2026-06-17T08:40:57.955Z"
+      "lastSuccessfulCheck": "2026-06-17T13:01:43.782Z"
     },
     "https://finawiz.com/": {
-      "isDown": false,
-      "lastSuccessfulCheck": "2026-06-17T08:41:28.267Z"
+      "isDown": true,
+      "lastSuccessfulCheck": "2026-06-17T08:41:28.267Z",
+      "lastFailureMessage": "Frontend browser check failed: Critical frontend resource failed: stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/intertight.css?ver=1743597529 (net::ERR_ABORTED) | stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/inter.css?ver=1743597548 (net::ERR_ABORTED); Critical frontend resource returned an error: stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/intertight.css?ver=1743597529 (HTTP 404) | stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/inter.css?ver=1743597548 (HTTP 404)",
+      "lastFailureAlertSentAt": "2026-06-17T13:03:44.253Z"
     }
   }
 }
