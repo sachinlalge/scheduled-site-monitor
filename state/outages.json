@@ -1,18 +1,22 @@
 {
   "sites": {
     "https://edgelearning.co/": {
-      "isDown": false,
+      "isDown": true,
       "lastSuccessfulCheck": "2026-06-18T12:38:02.472Z",
-      "lastRecoveryNotificationSentAt": "2026-06-17T13:01:43.743Z"
+      "lastRecoveryNotificationSentAt": "2026-06-17T13:01:43.743Z",
+      "lastFailureMessage": "ETIMEDOUT: ",
+      "lastFailureAlertSentAt": "2026-06-19T08:45:29.081Z"
     },
     "https://sircletech.in/": {
-      "isDown": false,
-      "lastSuccessfulCheck": "2026-06-18T12:38:02.513Z"
+      "isDown": true,
+      "lastSuccessfulCheck": "2026-06-18T12:38:02.513Z",
+      "lastFailureMessage": "ETIMEDOUT: ",
+      "lastFailureAlertSentAt": "2026-06-19T08:45:29.084Z"
     },
     "https://finawiz.com/": {
       "isDown": true,
       "lastSuccessfulCheck": "2026-06-17T08:41:28.267Z",
-      "lastFailureMessage": "Frontend browser check failed: Critical frontend resource failed: stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/intertight.css?ver=1743597529 (net::ERR_ABORTED) | stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/inter.css?ver=1743597548 (net::ERR_ABORTED); Critical frontend resource returned an error: stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/intertight.css?ver=1743597529 (HTTP 404) | stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/inter.css?ver=1743597548 (HTTP 404)",
+      "lastFailureMessage": "ETIMEDOUT: ",
       "lastFailureAlertSentAt": "2026-06-17T13:03:44.253Z"
     }
   }
