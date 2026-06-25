@@ -2,12 +2,12 @@
   "sites": {
     "https://edgelearning.co/": {
       "isDown": false,
-      "lastSuccessfulCheck": "2026-06-25T06:59:36.832Z",
+      "lastSuccessfulCheck": "2026-06-25T12:02:25.239Z",
       "lastRecoveryNotificationSentAt": "2026-06-23T12:21:37.328Z"
     },
     "https://sircletech.in/": {
       "isDown": false,
-      "lastSuccessfulCheck": "2026-06-25T06:59:36.873Z",
+      "lastSuccessfulCheck": "2026-06-25T12:02:25.278Z",
       "lastRecoveryNotificationSentAt": "2026-06-23T12:21:37.369Z"
     },
     "https://finawiz.com/": {
