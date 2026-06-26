@@ -1,9 +1,11 @@
 {
   "sites": {
     "https://edgelearning.co/": {
-      "isDown": false,
+      "isDown": true,
       "lastSuccessfulCheck": "2026-06-26T07:06:38.459Z",
-      "lastRecoveryNotificationSentAt": "2026-06-23T12:21:37.328Z"
+      "lastRecoveryNotificationSentAt": "2026-06-23T12:21:37.328Z",
+      "lastFailureMessage": "ETIMEDOUT: ",
+      "lastFailureAlertSentAt": "2026-06-26T12:00:48.239Z"
     },
     "https://sircletech.in/": {
       "isDown": true,
