@@ -6,9 +6,9 @@ Production-ready Node.js and TypeScript service that monitors websites twice per
 
 Default websites:
 
-- `https://edgelearning.co/`
-- `https://sircletech.in/`
-- `https://finawiz.com/`
+- `https://site1.com/`
+- `https://site2.com/`
+- `https://site3.com/`
 
 Schedule:
 
