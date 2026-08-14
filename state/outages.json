@@ -8,14 +8,16 @@
       "lastFailureAlertSentAt": "2026-07-22T11:27:06.599Z"
     },
     "https://sircletech.in/": {
-      "isDown": false,
+      "isDown": true,
       "lastSuccessfulCheck": "2026-08-13T10:36:47.643Z",
-      "lastRecoveryNotificationSentAt": "2026-08-09T10:05:36.559Z"
+      "lastRecoveryNotificationSentAt": "2026-08-09T10:05:36.559Z",
+      "lastFailureMessage": "ETIMEDOUT: ",
+      "lastFailureAlertSentAt": "2026-08-14T05:14:55.833Z"
     },
     "https://finawiz.com/": {
       "isDown": true,
       "lastSuccessfulCheck": "2026-06-17T08:41:28.267Z",
-      "lastFailureMessage": "Frontend browser check failed: Unhandled frontend error: Unexpected token '\u001f', \"\u001f�\b\u0000\u0000\u0000\u0000\u0000\u0002\u0003\"... is not valid JSON",
+      "lastFailureMessage": "ETIMEDOUT: ",
       "lastFailureAlertSentAt": "2026-06-17T13:03:44.253Z"
     }
   }
