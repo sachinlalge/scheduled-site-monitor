@@ -4,18 +4,18 @@
       "isDown": true,
       "lastSuccessfulCheck": "2026-07-22T06:08:45.720Z",
       "lastRecoveryNotificationSentAt": "2026-07-18T10:47:11.894Z",
-      "lastFailureMessage": "ENOTFOUND: getaddrinfo ENOTFOUND edgelearning.co",
+      "lastFailureMessage": "ECONNABORTED: timeout of 15000ms exceeded",
       "lastFailureAlertSentAt": "2026-07-22T11:27:06.599Z"
     },
     "https://sircletech.in/": {
       "isDown": false,
-      "lastSuccessfulCheck": "2026-09-01T14:15:13.433Z",
+      "lastSuccessfulCheck": "2026-09-02T08:01:27.835Z",
       "lastRecoveryNotificationSentAt": "2026-08-26T10:06:39.559Z"
     },
     "https://finawiz.com/": {
       "isDown": true,
       "lastSuccessfulCheck": "2026-06-17T08:41:28.267Z",
-      "lastFailureMessage": "Frontend browser check failed: Critical frontend resource failed: stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/intertight.css?ver=1743597529 (net::ERR_ABORTED) | stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/inter.css?ver=1743597548 (net::ERR_ABORTED); Critical frontend resource returned an error: stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/intertight.css?ver=1743597529 (HTTP 404) | stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/inter.css?ver=1743597548 (HTTP 404)",
+      "lastFailureMessage": "Frontend browser check failed: Critical frontend resource failed: stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/inter.css?ver=1743597548 (net::ERR_ABORTED) | stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/intertight.css?ver=1743597529 (net::ERR_ABORTED); Critical frontend resource returned an error: stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/inter.css?ver=1743597548 (HTTP 404) | stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/intertight.css?ver=1743597529 (HTTP 404)",
       "lastFailureAlertSentAt": "2026-06-17T13:03:44.253Z"
     }
   }
