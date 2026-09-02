@@ -4,12 +4,12 @@
       "isDown": true,
       "lastSuccessfulCheck": "2026-07-22T06:08:45.720Z",
       "lastRecoveryNotificationSentAt": "2026-07-18T10:47:11.894Z",
-      "lastFailureMessage": "ECONNABORTED: timeout of 15000ms exceeded",
+      "lastFailureMessage": "Frontend browser check failed: Unhandled frontend error: Cannot set properties of null (setting 'innerHTML')",
       "lastFailureAlertSentAt": "2026-07-22T11:27:06.599Z"
     },
     "https://sircletech.in/": {
       "isDown": false,
-      "lastSuccessfulCheck": "2026-09-02T08:01:27.835Z",
+      "lastSuccessfulCheck": "2026-09-02T13:48:13.065Z",
       "lastRecoveryNotificationSentAt": "2026-08-26T10:06:39.559Z"
     },
     "https://finawiz.com/": {
