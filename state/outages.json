@@ -8,16 +8,14 @@
       "lastFailureAlertSentAt": "2026-07-22T11:27:06.599Z"
     },
     "https://sircletech.in/": {
-      "isDown": true,
-      "lastSuccessfulCheck": "2026-09-02T13:48:13.065Z",
-      "lastRecoveryNotificationSentAt": "2026-08-26T10:06:39.559Z",
-      "lastFailureMessage": "Unexpected HTTP status 500",
-      "lastFailureAlertSentAt": "2026-09-03T08:12:54.209Z"
+      "isDown": false,
+      "lastSuccessfulCheck": "2026-09-04T13:41:55.836Z",
+      "lastRecoveryNotificationSentAt": "2026-09-04T13:41:55.836Z"
     },
     "https://finawiz.com/": {
       "isDown": true,
       "lastSuccessfulCheck": "2026-06-17T08:41:28.267Z",
-      "lastFailureMessage": "Frontend browser check failed: Unhandled frontend error: Unexpected token '<', \"<br /> <b>\"... is not valid JSON; Critical frontend resource failed: stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/intertight.css?ver=1743597529 (net::ERR_ABORTED) | stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/inter.css?ver=1743597548 (net::ERR_ABORTED); Critical frontend resource returned an error: stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/intertight.css?ver=1743597529 (HTTP 404) | stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/inter.css?ver=1743597548 (HTTP 404)",
+      "lastFailureMessage": "Frontend browser check failed: Unhandled frontend error: Unexpected token '<', \"<br /> <b>\"... is not valid JSON",
       "lastFailureAlertSentAt": "2026-06-17T13:03:44.253Z"
     }
   }
