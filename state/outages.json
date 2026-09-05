@@ -8,9 +8,11 @@
       "lastFailureAlertSentAt": "2026-07-22T11:27:06.599Z"
     },
     "https://sircletech.in/": {
-      "isDown": false,
+      "isDown": true,
       "lastSuccessfulCheck": "2026-09-04T13:41:55.836Z",
-      "lastRecoveryNotificationSentAt": "2026-09-04T13:41:55.836Z"
+      "lastRecoveryNotificationSentAt": "2026-09-04T13:41:55.836Z",
+      "lastFailureMessage": "Unexpected HTTP status 500",
+      "lastFailureAlertSentAt": "2026-09-05T07:48:07.803Z"
     },
     "https://finawiz.com/": {
       "isDown": true,
