@@ -4,14 +4,14 @@
       "isDown": true,
       "lastSuccessfulCheck": "2026-07-22T06:08:45.720Z",
       "lastRecoveryNotificationSentAt": "2026-07-18T10:47:11.894Z",
-      "lastFailureMessage": "Frontend browser check failed: Unhandled frontend error: Cannot set properties of null (setting 'innerHTML')",
+      "lastFailureMessage": "Frontend browser check failed: Unhandled frontend error: Cannot set properties of null (setting 'innerHTML') | Unexpected token '<', \" <!DOCTYPE \"... is not valid JSON",
       "lastFailureAlertSentAt": "2026-07-22T11:27:06.599Z"
     },
     "https://sircletech.in/": {
       "isDown": true,
       "lastSuccessfulCheck": "2026-09-04T13:41:55.836Z",
       "lastRecoveryNotificationSentAt": "2026-09-04T13:41:55.836Z",
-      "lastFailureMessage": "Unexpected HTTP status 500",
+      "lastFailureMessage": "Frontend browser check failed: Rendered page appears blank or nearly blank (visible text: 0 chars; visible elements: 0; visible media: 0; ready state: complete; title: N/A; final URL: https://sircletech.in/)",
       "lastFailureAlertSentAt": "2026-09-05T07:48:07.803Z"
     },
     "https://finawiz.com/": {
