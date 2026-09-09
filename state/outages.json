@@ -8,11 +8,9 @@
       "lastFailureAlertSentAt": "2026-07-22T11:27:06.599Z"
     },
     "https://sircletech.in/": {
-      "isDown": true,
-      "lastSuccessfulCheck": "2026-09-04T13:41:55.836Z",
-      "lastRecoveryNotificationSentAt": "2026-09-04T13:41:55.836Z",
-      "lastFailureMessage": "Frontend browser check failed: Rendered page appears blank or nearly blank (visible text: 0 chars; visible elements: 0; visible media: 0; ready state: complete; title: N/A; final URL: https://sircletech.in/)",
-      "lastFailureAlertSentAt": "2026-09-05T07:48:07.803Z"
+      "isDown": false,
+      "lastSuccessfulCheck": "2026-09-09T08:17:02.850Z",
+      "lastRecoveryNotificationSentAt": "2026-09-09T08:17:02.850Z"
     },
     "https://finawiz.com/": {
       "isDown": true,
