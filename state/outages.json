@@ -11,7 +11,7 @@
       "isDown": true,
       "lastSuccessfulCheck": "2026-09-09T08:17:02.850Z",
       "lastRecoveryNotificationSentAt": "2026-09-09T08:17:02.850Z",
-      "lastFailureMessage": "Unexpected HTTP status 403",
+      "lastFailureMessage": "Frontend browser check failed: Rendered page appears blank or nearly blank (visible text: 0 chars; visible elements: 0; visible media: 0; ready state: complete; title: N/A; final URL: https://sircletech.in/)",
       "lastFailureAlertSentAt": "2026-09-09T13:51:50.521Z"
     },
     "https://finawiz.com/": {
