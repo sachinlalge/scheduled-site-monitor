@@ -11,14 +11,13 @@
       "isDown": true,
       "lastSuccessfulCheck": "2026-09-09T08:17:02.850Z",
       "lastRecoveryNotificationSentAt": "2026-09-09T08:17:02.850Z",
-      "lastFailureMessage": "Frontend browser check failed: Rendered page appears blank or nearly blank (visible text: 0 chars; visible elements: 0; visible media: 0; ready state: complete; title: N/A; final URL: https://sircletech.in/)",
+      "lastFailureMessage": "Unexpected HTTP status 403",
       "lastFailureAlertSentAt": "2026-09-09T13:51:50.521Z"
     },
     "https://finawiz.com/": {
-      "isDown": true,
-      "lastSuccessfulCheck": "2026-06-17T08:41:28.267Z",
-      "lastFailureMessage": "Frontend browser check failed: Unhandled frontend error: Unexpected token '<', \"<br /> <b>\"... is not valid JSON",
-      "lastFailureAlertSentAt": "2026-06-17T13:03:44.253Z"
+      "isDown": false,
+      "lastSuccessfulCheck": "2026-09-11T08:11:46.703Z",
+      "lastRecoveryNotificationSentAt": "2026-09-11T08:11:46.703Z"
     }
   }
 }
