@@ -15,11 +15,9 @@
       "lastFailureAlertSentAt": "2026-09-09T13:51:50.521Z"
     },
     "https://finawiz.com/": {
-      "isDown": true,
-      "lastSuccessfulCheck": "2026-09-12T08:02:54.131Z",
-      "lastRecoveryNotificationSentAt": "2026-09-11T08:11:46.703Z",
-      "lastFailureMessage": "Unexpected HTTP status 403",
-      "lastFailureAlertSentAt": "2026-09-12T13:02:55.570Z"
+      "isDown": false,
+      "lastSuccessfulCheck": "2026-09-13T08:27:01.619Z",
+      "lastRecoveryNotificationSentAt": "2026-09-13T08:27:01.619Z"
     }
   }
 }
