@@ -15,9 +15,11 @@
       "lastFailureAlertSentAt": "2026-09-09T13:51:50.521Z"
     },
     "https://finawiz.com/": {
-      "isDown": false,
+      "isDown": true,
       "lastSuccessfulCheck": "2026-09-14T15:58:27.190Z",
-      "lastRecoveryNotificationSentAt": "2026-09-13T08:27:01.619Z"
+      "lastRecoveryNotificationSentAt": "2026-09-13T08:27:01.619Z",
+      "lastFailureMessage": "Frontend browser check failed: Critical frontend resource failed: stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/intertight.css?ver=1743597529 (net::ERR_ABORTED) | stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/inter.css?ver=1743597548 (net::ERR_ABORTED); Critical frontend resource returned an error: stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/intertight.css?ver=1743597529 (HTTP 404) | stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/inter.css?ver=1743597548 (HTTP 404)",
+      "lastFailureAlertSentAt": "2026-09-15T08:52:06.288Z"
     }
   }
 }
