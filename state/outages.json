@@ -8,15 +8,17 @@
       "lastFailureAlertSentAt": "2026-07-22T11:27:06.599Z"
     },
     "https://sircletech.in/": {
-      "isDown": false,
+      "isDown": true,
       "lastSuccessfulCheck": "2026-09-22T08:41:30.080Z",
-      "lastRecoveryNotificationSentAt": "2026-09-21T09:09:49.164Z"
+      "lastRecoveryNotificationSentAt": "2026-09-21T09:09:49.164Z",
+      "lastFailureMessage": "ETIMEDOUT: ",
+      "lastFailureAlertSentAt": "2026-09-22T14:09:27.400Z"
     },
     "https://finawiz.com/": {
       "isDown": true,
       "lastSuccessfulCheck": "2026-09-14T15:58:27.190Z",
       "lastRecoveryNotificationSentAt": "2026-09-13T08:27:01.619Z",
-      "lastFailureMessage": "Frontend browser check failed: Critical frontend resource failed: stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/intertight.css?ver=1743597529 (net::ERR_ABORTED) | stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/inter.css?ver=1743597548 (net::ERR_ABORTED); Critical frontend resource returned an error: stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/intertight.css?ver=1743597529 (HTTP 404) | stylesheet https://finawiz.com/wp-content/uploads/elementor/google-fonts/css/inter.css?ver=1743597548 (HTTP 404)",
+      "lastFailureMessage": "ETIMEDOUT: ",
       "lastFailureAlertSentAt": "2026-09-15T08:52:06.288Z"
     }
   }
